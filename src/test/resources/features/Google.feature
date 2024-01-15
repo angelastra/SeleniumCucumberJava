@@ -1,13 +1,9 @@
 #Esto es un comentario en un feature
 @google
 Feature: Probar Funcionalidad de Google
-Scenario Outline: Busco algo en Google
+Scenario: Busco algo en Google
 Given navego a Google
-When busco <algo>
+When busco michael jordan
 And click en boton de busqueda
-Then obtengo resultados de <algo>
+Then obtengo resultados de michael jordan
 
-Examples:
-    |   algo   |
-    | Argentina|
-    | México   |
