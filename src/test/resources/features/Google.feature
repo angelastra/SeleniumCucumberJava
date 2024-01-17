@@ -11,3 +11,5 @@ Examples:
     |   algo   |
     | Argentina|
     | México   |
+    | Francia  |
+    | España   |
