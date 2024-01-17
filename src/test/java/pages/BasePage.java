@@ -1,5 +1,6 @@
 package pages;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -12,7 +13,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-
 public class BasePage
 {
     protected static WebDriver driver;
@@ -21,15 +21,17 @@ public class BasePage
 
     static
     {
-        System.setProperty("webdriver.chrome.driver", "C:/Users/negre/Downloads/chromedriver_win32(2)/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe"); 
+        //WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--remote-allow-origins=*");
         driver = new ChromeDriver(chromeOptions);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, Duration.ofSeconds(5));
     }
 
-    public BasePage(){
-        //BasePage.driver = driver;
-        wait =  new WebDriverWait(driver,10);
+    public BasePage(WebDriver driver){
+        BasePage.driver = driver;
     }
 
     public static void navigateTo(String url){

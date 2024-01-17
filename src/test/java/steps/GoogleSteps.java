@@ -1,14 +1,14 @@
 package steps;
 
 import org.junit.Assert;
-import cucumber.api.java.en.*;
+import io.cucumber.java.en.*;
 import pages.GooglePage;
 
 public class GoogleSteps {
 
-   GooglePage google = new GooglePage();
+   GooglePage google= new GooglePage();
 
-   @Given("^navego a Google$")
+   @Given("navego a Google")
    public void navigateToGoogle()
    {
       google.navigateToGoogle();

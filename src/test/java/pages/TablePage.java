@@ -3,9 +3,10 @@ package pages;
 public class TablePage extends BasePage {
 
     private String tableLocator = "/html/body/div/div";
+
     
     public TablePage(){
-        super();
+        super(driver);
     }
 
     public void navigateToTable(String url){
