@@ -21,7 +21,7 @@ public class BasePage
 
     static
     {
-        System.setProperty("webdriver.chrome.driver", "C:/chromedriver.exe"); 
+        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\drivers\\chromedriver.exe"); 
         //WebDriverManager.chromedriver().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--start-maximized");
