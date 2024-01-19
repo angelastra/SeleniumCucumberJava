@@ -18,5 +18,6 @@ public class TableSteps {
     public void getValueFromTable(){
         String values = tablePage.getValue(3,3);
         Assert.assertEquals("r: 2, c: 2", values);
+        System.out.println("Table tag executed correctly");
     }
 }

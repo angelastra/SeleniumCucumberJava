@@ -7,8 +7,7 @@ import pages.BasePage;
 @RunWith(io.cucumber.junit.Cucumber.class)
 @io.cucumber.junit.CucumberOptions(
     features = "src/test/resources/features",
-    glue = "steps",
-    tags = "@google"
+    glue = "steps"
 )
 public class Runner
 {
